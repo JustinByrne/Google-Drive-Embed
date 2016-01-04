@@ -1,0 +1,24 @@
+#google-drive-content	{
+	position: fixed;
+	padding: 10px;
+}
+#google-drive-content table	{
+	width: 100%;
+}
+#google-drive-content table tr td:first-child	{
+	width: 15%;
+}
+#google-drive-content #drive-url	{
+	width: 50%;
+}
+#google-drive-close-btn	{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+#google-drive-insert-btn	{
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+}
