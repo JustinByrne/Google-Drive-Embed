@@ -83,8 +83,6 @@ class GoogleDriveEmbed	{
 			</div>
 		</div>';
 
-		return $form;
-
 	}
 
 	public function register_popup_scripts()	{
