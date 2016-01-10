@@ -3,7 +3,7 @@
  * Plugin Name: Google Drive Folder Embed
  * Plugin URI: https://github.com/JustinByrne/Google-Drive-Embed
  * Description: This plugin adds the ability to embed a Google Drive folder into a post or page.
- * Version: 1.0.0
+ * Version: 2.0.1
  * Author: Justin Byrne
  * Author URI: http://jnm-tech.co.uk
  * License: GPL2
