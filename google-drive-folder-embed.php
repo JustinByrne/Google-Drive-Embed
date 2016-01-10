@@ -3,7 +3,7 @@
  * Plugin Name: Google Drive Folder Embed
  * Plugin URI: https://github.com/JustinByrne/Google-Drive-Folder-Embed
  * Description: This plugin adds the ability to embed a Google Drive folder into a post or page.
- * Version: 2.0.1
+ * Version: 2.0.2
  * Author: Justin Byrne
  * Author URI: http://jnm-tech.co.uk
  * License: GPL2
@@ -13,12 +13,17 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 require_once( ABSPATH . 'wp-includes/pluggable.php' );
 
+// creating a new plugin instant
+new GoogleDriveEmbed();
+
 
 class GoogleDriveEmbed	{
 
+	public $pluginName;
+
 	public function __construct()	{
 
-		// load_plugin_textdomain( 'google-drive-embed', false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
+		// load_plugin_textdomain( $this->pluginName, false, dirname( plugin_basename( __FILE__ ) ) . '/lang' );
 
 		if( current_user_can('edit_posts') &&  current_user_can('edit_pages') )	{
 
@@ -31,6 +36,8 @@ class GoogleDriveEmbed	{
 			add_shortcode( 'google-drive', array( $this, 'google_drive_func' ) );
 
 		}
+
+		$this->pluginName = str_replace( '/' . basename( __FILE__ ), '', plugin_basename( __FILE__ ) );
 
 	}
 
@@ -87,17 +94,17 @@ class GoogleDriveEmbed	{
 
 	public function register_popup_scripts()	{
 
-		wp_register_script( 'google-drive-embed', plugins_url( 'google-drive-embed/js/popup.js' ) );
+		wp_register_script( $this->pluginName, plugins_url( $this->pluginName . '/js/popup.js' ) );
     	
-    	wp_enqueue_script( 'google-drive-embed' );
+    	wp_enqueue_script( $this->pluginName );
 
 	}
 
 	public function register_popup_styles()	{
 
-		wp_register_style( 'google-drive-embed', plugins_url( 'google-drive-embed/css/popup.css' ) );
+		wp_register_style( $this->pluginName, plugins_url( $this->pluginName . '/css/popup.css' ) );
 
-		wp_enqueue_style( 'google-drive-embed' );
+		wp_enqueue_style( $this->pluginName );
 
 	}
 
@@ -159,6 +166,3 @@ class GoogleDriveEmbed	{
 	}
 
 }
-
-// creating a new instant
-$gde = new GoogleDriveEmbed();
