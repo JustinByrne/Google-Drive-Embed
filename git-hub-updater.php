@@ -8,7 +8,7 @@ class GitHubUpdater	{
 	private $pluginFile; // __FILE__ of our plugin
 	private $githubAPIResult; // holds data from GitHub
 	private $accessToken; // GitHub private repo token
-	private $pluginActive // plugin active data
+	private $pluginActive; // plugin active data
 
 
 	function __construct( $pluginFile, $gitHubUsername, $gitHubProjectName, $accessToken = '' )	{
