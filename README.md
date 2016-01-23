@@ -22,7 +22,9 @@ A folder can be added to your page or post using the `Add Google Drive Folder` b
 
 ### Screenshots
 ![Image of Edit Page](http://i.imgur.com/6H2TOZw.png)
+
 ![Image of Properties](http://i.imgur.com/cwViIip.png)
+
 ![Image of Google Drive Sharing](http://i.imgur.com/WTBCzvp.png)
 
 ## License
