@@ -21,8 +21,9 @@ This plugin has a built in updater that updates directly from GitHub releases. T
 A folder can be added to your page or post using the `Add Google Drive Folder` button.
 
 ### Screenshots
-![Image of Edit Page](https://drive.google.com/file/d/0B-vQXPiZoCGmMGcyMWxKQkRxRGM/view?usp=sharing)
-![Image of Properties](https://drive.google.com/file/d/0B-vQXPiZoCGmR3VvWEc5a2FUVTg/view?usp=sharing)
+![Image of Edit Page](http://i.imgur.com/6H2TOZw.png)
+![Image of Properties](http://i.imgur.com/cwViIip.png)
+![Image of Google Drive Sharing](http://i.imgur.com/WTBCzvp.png)
 
 ## License
 Google Drive folder Embed is licensed under [GNU General Public License v2 (or later)](https://github.com/JustinByrne/Google-Drive-Folder-Embed/blob/master/LICENSE).
