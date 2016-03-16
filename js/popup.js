@@ -41,7 +41,7 @@ jQuery( function($)	{ // adding $ ability for jQuery
 		
 		});
 
-		$( '#drive-height-range' ).change( function()	{
+		$( '#drive-height-range' ).on( 'input', function()	{
 
 			$( '#drive-height-value' ).val( $( this ).val() + 'px' );
 
