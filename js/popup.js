@@ -31,6 +31,8 @@ jQuery( function($)	{ // adding $ ability for jQuery
 
 			$( '#drive-height-value' ).val( $( '#drive-height-range' ).val() + 'px' );
 
+			$( '#drive-width-value' ).val( $( '#drive-width-range' ).val() + '%' );
+
 			$( '#drive-link' ).attr( 'checked', false );
 
 		});
@@ -47,19 +49,26 @@ jQuery( function($)	{ // adding $ ability for jQuery
 
 		});
 
+		$( '#drive-width-range' ).on( 'input', function()	{
+
+			$( '#drive-width-value' ).val( $( this ).val() + '%' );
+
+		});
+
 		$( '#google-drive-insert-btn' ).click( function() {
 
 			// getting values from the form
 			var url = $( '#drive-url' ).val();
 			var view = ( $( '#drive-view' ).val() != 'grid' ) ? ' view="' + $( '#drive-view' ).val() + '"' : '';
 			var height = ( $( '#drive-height-range' ).val() > 290 )	? ' height="' + $( '#drive-height-range' ).val() + '"' : '';
+			var width = ( $( '#drive-width-range' ).val() != 100 )	? ' width="' + $( '#drive-width-range' ).val() + '"' : '';
 			var link = ( $( '#drive-link' ).is( ':checked' ) ) ? ' link="true"' : '';
 
 			// checking that the url has been entered
 			if( url != '' )	{
 
 				// adding shortcode to the editor
-				window.send_to_editor( '[google-drive url="' + url + '"' + view + height + link + ']' );
+				window.send_to_editor( '[google-drive url="' + url + '"' + view + height + link + width + ']' );
 
 				// closing the popup
 				$( '#google-drive-popup' ).hide();
