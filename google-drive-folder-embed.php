@@ -83,14 +83,14 @@ class GoogleDriveFolderEmbed	{
 							<td><label for="drive-height">iframe height: </label></td>
 							<td>
 								<input type="range" min="290" max="1000" step="10" value="290" name="drive-height-range" id="drive-height-range">
-								<input type="text" name="drive-height-value" id="drive-height-value" readonly="readonly">
+								<input type="text" name="drive-height-value" id="drive-height-value">
 							</td>
 						</tr>
 						<tr>
 							<td><label for="drive-height">iframe width: </label></td>
 							<td>
 								<input type="range" min="0" max="100" step="1" value="100" name="drive-width-range" id="drive-width-range">
-								<input type="text" name="drive-width-value" id="drive-width-value" readonly="readonly">
+								<input type="text" name="drive-width-value" id="drive-width-value">
 							</td>
 						</tr>
 						<tr>
@@ -129,9 +129,9 @@ class GoogleDriveFolderEmbed	{
 	
 			'url' => '',
 			'view' => 'grid',
-			'height' => '290',
+			'height' => '290px',
 			'link' => false,
-			'width' => 100,
+			'width' => '100%',
 
 		), $atts ) );
 
@@ -161,7 +161,7 @@ class GoogleDriveFolderEmbed	{
 
 			// creating iframe
 			$iframe = '<iframe src="https://drive.google.com/embeddedfolderview?id=' 
-					. $id . '#' . $view. '" width="' . $width . '%" height="' . $height . '" frameborder="0"></iframe>';
+					. $id . '#' . $view. '" width="' . $width . '" height="' . $height . '" frameborder="0"></iframe>';
 
 			// creating link to Google Drive folder
 			if( $link )	{

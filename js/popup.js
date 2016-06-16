@@ -29,8 +29,10 @@ jQuery( function($)	{ // adding $ ability for jQuery
 			// restoring form defaults
 			$( '#drive-url' ).val( '' ).css( 'background-color', '#FFF' );
 
+			$( '#drive-height-range' ).val( 290 );
 			$( '#drive-height-value' ).val( $( '#drive-height-range' ).val() + 'px' );
 
+			$( '#drive-width-range' ).val( 100 );
 			$( '#drive-width-value' ).val( $( '#drive-width-range' ).val() + '%' );
 
 			$( '#drive-link' ).attr( 'checked', false );
@@ -60,8 +62,8 @@ jQuery( function($)	{ // adding $ ability for jQuery
 			// getting values from the form
 			var url = $( '#drive-url' ).val();
 			var view = ( $( '#drive-view' ).val() != 'grid' ) ? ' view="' + $( '#drive-view' ).val() + '"' : '';
-			var height = ( $( '#drive-height-range' ).val() > 290 )	? ' height="' + $( '#drive-height-range' ).val() + '"' : '';
-			var width = ( $( '#drive-width-range' ).val() != 100 )	? ' width="' + $( '#drive-width-range' ).val() + '"' : '';
+			var height = ( $( '#drive-height-value' ).val() != '290px' )	? ' height="' + $( '#drive-height-value' ).val() + '"' : '';
+			var width = ( $( '#drive-width-value' ).val() != '100%' )	? ' width="' + $( '#drive-width-value' ).val() + '"' : '';
 			var link = ( $( '#drive-link' ).is( ':checked' ) ) ? ' link="true"' : '';
 
 			// checking that the url has been entered
